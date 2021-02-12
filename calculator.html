@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Adding two numbers</title>
+		<link rel="stylesheet" href="calculator.css" />
+		<script src="calculator.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Week 6:</h1>
+			<h2>Moeti Molateli</h2>
+		</header>
+		<main>
+			<h3>Test your Math skill</h3>
+			<input type="text" id="number1" placeholder="x" />
+			<select name="operatorSelects" id="operator">
+				<option value="">Select Operator</option>
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+			<input type="text" id="number2" placeholder="y" />
+			<div>=</div>
+			<input type="text" id="answer" placeholder="Answer" />
+			<label><button onclick="calculate()">Check</button></label>
+			<hr />
+			<p><span id="output"></span></p>
+		</main>
+		<footer>
+			&copy;2021 &bull; Moeti Molateli &bull; BYU-Idaho &bull; CIT 160
+		</footer>
+	</body>
+</html>

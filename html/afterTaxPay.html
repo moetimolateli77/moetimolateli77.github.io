@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculating After Tax Pay</title>
+	</head>
+	<body>
+		<header>
+			<h1>Week 5: Exam Part 2</h1>
+			<h2>Moeti Molateli</h2>
+		</header>
+		<main>
+			<h3>Calcute After Tax Pay</h3>
+			<label
+				>Enter regular hours worked: <input type="text" id="regularHours"
+			/></label>
+			<label
+				>Enter overtime hours worked: <input type="text" id="overtimeHours"
+			/></label>
+			<label><button onclick="afterTaxPay()">Get After Tax Pay</button></label>
+			<hr />
+			<p><span id="output"></span></p>
+		</main>
+		<footer>
+			&copy;2021 &bull; Moeti Molateli &bull; BYU-Idaho &bull; CIT 160
+		</footer>
+		<script>
+			function afterTaxPay() {
+				// Input: Collecting and converting input data in to real numbers
+				let regularHours = parseFloat(
+					document.getElementById("regularHours").value
+				);
+				let overtimeHours = parseFloat(
+					document.getElementById("overtimeHours").value
+				);
+				// Processing: Calculating Gross Pay
+				const regularPayPerHour = 15;
+				const overtimePayPerhour = 22.5;
+				let grossAmount =
+					regularPayPerHour * regularHours +
+					overtimePayPerhour * overtimeHours;
+				let tax = grossAmount * 0.15;
+				let afterTaxPay = grossAmount - tax;
+				// Processing: Rounding output to 2 decimal places
+				let digits = 2;
+				let multiplier = Math.pow(10, digits);
+				afterTaxPay = Math.round(afterTaxPay * multiplier) / multiplier;
+
+				// Output: displays results to the user
+				document.getElementById("output").innerHTML =
+					"Your After Tax pay is $" + afterTaxPay;
+			}
+		</script>
+	</body>
+</html>

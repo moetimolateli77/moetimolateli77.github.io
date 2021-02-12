@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculating Volume Of a Cylinder</title>
+	</head>
+	<body>
+		<header>
+			<h1>Week 5: Exam Part 2</h1>
+			<h2>Moeti Molateli</h2>
+		</header>
+		<main>
+			<h3>Calculates Volume of a Cylinder</h3>
+			<label>Enter Radius: <input type="text" id="radius" /></label>
+			<label>Enter Height: <input type="text" id="height" /></label>
+			<label><button onclick="CalculateVolume()">Get Volume</button></label>
+			<hr />
+			<p><span id="output"></span></p>
+		</main>
+		<footer>
+			&copy;2021 &bull; Moeti Molateli &bull; BYU-Idaho &bull; CIT 160
+		</footer>
+		<script>
+			function CalculateVolume() {
+				// Input: Collecting and converting input data(radius and height) into real numbers
+				let r = parseFloat(document.getElementById("radius").value);
+				let h = parseFloat(document.getElementById("height").value);
+				// Processing: Calculating Volume using formula: V = pi x r x r x h
+				let v = Math.PI * r * r * h;
+				// Processing: Rounding the Volume to the nearest whole number
+				v = Math.round(v);
+				// Output: displaying results to the user
+				document.getElementById("output").innerHTML = "Volume:" + " " + v;
+			}
+		</script>
+	</body>
+</html>
