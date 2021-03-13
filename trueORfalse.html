@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exam Part 2</title>
+		<link rel="stylesheet" href="calculator.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Week 9:</h1>
+			<h2>Moeti Molateli</h2>
+		</header>
+		<main>
+			<h3>True or False</h3>
+			<input type="text" id="number1" placeholder="First #" />
+			<input type="text" id="number2" placeholder="Second #" />
+			<label><button onclick="trueOrFalse()">Check</button></label>
+			<hr />
+			<p><span id="output"></span></p>
+		</main>
+		<footer>
+			&copy;2021 &bull; Moeti Molateli &bull; BYU-Idaho &bull; CIT 160
+		</footer>
+		<script>
+			function trueOrFalse() {
+				// Input: Accepting and reading user input
+				let x = parseFloat(document.getElementById("number1").value);
+				let y = parseFloat(document.getElementById("number2").value);
+                // Processing: Checking if conditions are True or False
+				let message;
+				if ((x > 5 && y > 5) || x + y > 20) {
+					message = "True";
+				} else {
+					message = "False";
+				}
+				//Output: Displaying Message
+				document.getElementById("output").innerHTML = message;
+			}
+		</script>
+	</body>
+</html>

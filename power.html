@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Repetition</title>
+		<link rel="stylesheet" href="mainStyle.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Week: 9</h1>
+			<h2>Moeti Molateli</h2>
+		</header>
+		<main>
+			<h3>Powers of 2</h3>
+			<label><button onclick="powerOfTwo()">Get powers</button></label>
+			<hr />
+			<p><span id="output"><span></p>
+		</main>
+		<footer>
+			&copy;2021 &bull; Moeti Molateli &bull; BYU-Idaho &bull; CIT 160
+		</footer>
+		<script>
+           /* Input: interger numbers
+            * Processing: Counts and finds powers of 2
+            * Output: Powers of 2
+            */
+           function powerOfTwo() {
+               
+               // Processing: Counting from 1 to 31 interger, then power 2 to 1-31
+               let output = "";
+               for (let int = 0; int <= 31; int++) {
+                  let power = Math.pow(2, int);
+                
+              // Processing: Combining results of 2 to power 1-31
+		        output += power + "," + " "; 
+                                   
+               }
+               //Output: Display sum of odd numbers
+               document.getElementById("output").innerHTML = output;
+                   
+           }
+           </script>
+	</body>
+</html>
