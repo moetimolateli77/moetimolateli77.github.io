@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Functions</title>
+		<link rel="stylesheet" href="invest.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Week 11:</h1>
+			<h2>Moeti Molateli</h2>
+		</header>
+		<main>
+			<h3>Future Value</h3>
+			<label>Amount invested (Principal):</label>
+			<input type="text" id="pri" placeholder="Principal" /><br /><br />
+			<label>Annual rate(Example:.08):</label>
+			<input
+				type="text"
+				id="ann"
+				placeholder="Annual rate"
+			/><br /><br />
+			<label>Number of years:</label>
+			<input type="text" id="num" placeholder="Number of years" /><br /><br />
+			<label>Periods per year:</label>
+			<input type="text" id="per" placeholder="Periods per year" /><br /><br />
+			<button onclick="doFV()">Compute Future Value</button>
+			<input type="text" id="output" readonly />
+		</main>
+		<footer>
+			&copy;2021 &bull; Moeti Molateli &bull; BYU-Idaho &bull; CIT 160
+		</footer>
+		<script src="invest.js"></script>
+	</body>
+</html>
