@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Arrays</title>
+		<link rel="stylesheet" href="mainStyle.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Week: 12</h1>
+			<h2>Moeti Molateli</h2>
+		</header>
+		<main>
+			<h3>Arrays</h3>
+			<label><button onclick="test()">Test</button></label>
+			<hr />
+			<p><span id="output"></span></p>
+		</main>
+		<footer>
+			&copy;2021 &bull; Moeti Molateli &bull; BYU-Idaho &bull; CIT 160
+		</footer>
+		<script>
+			/* Defining Table
+			 * Input: no user input
+			 * Processing: Test the addEnds and getMiddle functions by calling them.
+			 * Output: The values returned from the addEnds and getMiddle functions.
+			 */
+			function test() {
+				let list1 = [17, 8, 9, 5, 20];
+				let list2 = [12, 4, 8, 15, 17, 5, 20, 11];
+
+				// Test the addEnds function by calling it two times.
+				let sum1 = addEnds(list1);
+				let sum2 = addEnds(list2);
+
+				// Test the getMiddle function by calling it two times.
+				let mid1 = getMiddle(list1);
+				let mid2 = getMiddle(list2);
+
+				// Build a string to display to the user.
+				let output = sum1 + "<br>" + sum2 + "<br>" + mid1 + "<br>" + mid2;
+
+				// Display the output string for the user to see.
+				document.getElementById("output").innerHTML = output;
+			}
+			function addEnds(list) {
+				// Summing first and last values of list1 and list2.
+				return list[0] + list[list.length - 1];
+			}
+			function getMiddle(list) {
+				// check to see if list are odd or even, then find middle value.
+				for (let i = 0; i < list.length; i++) {
+					if (list.length % 2 !== 0) {
+						return list[2];
+					} else if (list.length % 2 == 0) {
+						let sum = list[3] + list[4];
+						return sum / 2;
+					} else {
+						return "Undefined";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
